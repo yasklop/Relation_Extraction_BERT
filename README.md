@@ -6,8 +6,6 @@ This project trains a BERT-based model for relation extraction using the `train_
 
 Ensure you have the following dependencies installed:
 
-Python 3.8+
-
 PyTorch
 
 Transformers (Hugging Face)
