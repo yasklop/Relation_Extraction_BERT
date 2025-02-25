@@ -19,12 +19,12 @@ json (built-in)
 ## Dataset
 
 ### 1️. Dataset Overview
+Source: https://github.com/thunlp/FewRel
+
 This project uses a structured dataset for **Relation Extraction (RE)**, where each instance consists of:
 - A **text sequence** containing two entities.
 - **Entity positions** within the text.
 - The **relation label** between the two entities.
-
-The dataset follows a format similar to **FewRel** and is stored as a JSON file.
 
 ---
 ###  2️.  Dataset Files
@@ -136,3 +136,25 @@ To load and use the model later:
 model=torch.load(PATH)
 model.eval()
 ```
+## Citation
+If you use this project or its datasets, please cite the following sources:
+
+### FewRel: Large-Scale Supervised Few-Shot Relation Classification  
+Han, Xu, et al. (2018)  
+[*FewRel: A Large-Scale Supervised Few-Shot Relation Classification Dataset with State-of-the-Art Evaluation*](https://www.aclweb.org/anthology/D18-1514)  
+**Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing**  
+DOI: [10.18653/v1/D18-1514](https://doi.org/10.18653/v1/D18-1514)
+
+```bibtex
+@inproceedings{han-etal-2018-fewrel,
+    title = "{F}ew{R}el: A Large-Scale Supervised Few-Shot Relation Classification Dataset with State-of-the-Art Evaluation",
+    author = "Han, Xu and Zhu, Hao and Yu, Pengfei and Wang, Ziyun and Yao, Yuan and Liu, Zhiyuan and Sun, Maosong",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D18-1514",
+    doi = "10.18653/v1/D18-1514",
+    pages = "4803--4809"
+}
