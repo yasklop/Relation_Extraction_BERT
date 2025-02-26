@@ -96,7 +96,40 @@ The model is trained using **BERT-based Relation Extraction (BERT-RE)**. The tra
    - **Optimizer:** AdamW with a learning rate of **2e-5**  
    - **Batch Size:** 16  
    - **Epochs:** 3
-   - 
+  
+## Evaluation
+### Test Accuracy: 0.89
+#### Categories with Poor Performance
+The following labels have both low precision and recall, indicating that the model struggles to correctly classify these relationships:
+
+| Label | Precision | Recall | F1 Score |
+|-------|-----------|--------|----------|
+| 7     | 0.65      | 0.56   | 0.60     |
+| 50    | 0.90      | 0.60   | 0.72     |
+| 48    | 0.76      | 0.64   | 0.70     |
+
+These results suggest that the model frequently misclassifies these relationship types.
+
+#### High Recall but Low Precision
+The following labels have high recall but low precision, meaning the model tends to over-predict these relationships, which may affect overall reliability:
+
+| Label | Precision | Recall | F1 Score |
+|-------|-----------|--------|----------|
+| 22    | 0.66      | 0.96   | 0.78     |
+| 21    | 0.66      | 0.83   | 0.74     |
+
+This indicates that the model often falsely predicts these labels, leading to many false positives.
+
+#### High Precision but Low Recall
+The following labels have high precision but low recall, meaning the model rarely predicts these relationships, possibly due to data imbalance or weak feature representation:
+
+| Label | Precision | Recall | F1 Score |
+|-------|-----------|--------|----------|
+| 50    | 0.90      | 0.60   | 0.72     |
+| 41    | 0.98      | 0.79   | 0.88     |
+
+This suggests that these relationships are under-predicted, which might be caused by insufficient training examples or unclear features in the dataset.
+
 ## Running the Inference Method
 To run the relation extraction method in real-time, use the `infer` function, which takes the following inputs:
 
