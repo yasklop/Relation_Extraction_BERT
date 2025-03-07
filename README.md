@@ -251,9 +251,9 @@ The following labels have both low precision and recall, indicating that the mod
 
 | Label | Precision | Recall | F1 Score |
 |-------|-----------|--------|----------|
-| P7    | 0.65      | 0.56   | 0.60     |
-| P50   | 0.90      | 0.60   | 0.72     |
-| P48   | 0.76      | 0.64   | 0.70     |
+| P127    | 0.65      | 0.56   | 0.60     |
+| P58   | 0.90      | 0.60   | 0.72     |
+| P551   | 0.76      | 0.64   | 0.70     |
 
 
   
@@ -274,8 +274,8 @@ The following labels have high recall but low precision, meaning the model tends
 
 | Label | Precision | Recall | F1 Score |
 |-------|-----------|--------|----------|
-| P22   | 0.66      | 0.96   | 0.78     |
-| P21   | 0.66      | 0.83   | 0.74     |
+| P17   | 0.66      | 0.96   | 0.78     |
+| P159   | 0.66      | 0.83   | 0.74     |
 
   
 
@@ -292,8 +292,8 @@ The following labels have high precision but low recall, meaning the model rarel
 
 | Label | Precision | Recall | F1 Score |
 |-------|-----------|--------|----------|
-| P50   | 0.90      | 0.60   | 0.72     |
-| P41   | 0.98      | 0.79   | 0.88     |
+| P58   | 0.90      | 0.60   | 0.72     |
+| P407   | 0.98      | 0.79   | 0.88     |
 
 
  
