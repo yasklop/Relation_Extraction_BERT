@@ -181,7 +181,7 @@ According to hyperparameter tuning, `GridSearchCV` is a great choice to apply to
   
 ### - BERT 
 The model is trained using **BERT-based Relation Extraction (BERT-RE)**. The training process involves fine-tuning a pre-trained **BERT-base-uncased** model on the extracted relation-labeled sentences.
-
+https://drive.google.com/file/d/1W5_Gx4qKyOdQazr9kBh7NH_tPnf6YRa9/view?usp=sharing
   
 
 1. **Model Architecture**
