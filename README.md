@@ -167,12 +167,12 @@ After preprocessing, the dataset is ready to be used for training the BERT-based
 Traditional machine learning algorithm **SVM** is less complicated than deep learning BERT. The number of hyperparameters are relatively small. 
 
 The main parameters:
-
 · `C`: **float, default=1.0**
 
 · `kernel`: **{‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’} or callable, default=’rbf’**
 
 · `gamma`: **{‘scale’, ‘auto’} or float, default=’scale’**
+
 
 If you would like to find out more, you can check the official document (https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html).
 
@@ -210,7 +210,7 @@ The model is trained using **BERT-based Relation Extraction (BERT-RE)**. The tra
 
 ### - SVM
 
-### Test Accuracy: 0.63
+### Test Accuracy: 0.68
 
 #### Categories with Poor Performance
 
@@ -219,51 +219,23 @@ The following labels have both low precision and recall, indicating that the mod
 
 | Label  | Precision | Recall | F1 Score |
 |--------|-----------|--------|----------|
-| P1001  | 0.20      | 0.44   | 0.27     |
-| P101   | 0.21      | 0.35   | 0.26     |
-| P159   | 0.18      | 0.17   | 0.17     |
+| P551  | 0.40      | 0.33   | 0.36     |
+| P800   | 0.40      | 0.42   | 0.41     |
+| P527   | 0.29      | 0.31   | 0.30     |
 
 
  
 These results suggest that the model frequently misclassifies these relationship types.
 
-  
-
-#### High Recall but Low Precision
-
-The following labels have high recall but low precision, meaning the model tends to over-predict these relationships, which may affect overall reliability:
-
-  
-
-
-| Label  | Precision | Recall | F1 Score |
-|--------|-----------|--------|----------|
-| P127   | 0.04      | 0.70   | 0.08     |
-| P3373    | 0.34      | 0.69   | 0.46     |
-
-
-  
-
-This indicates that the model often falsely predicts these labels, leading to many false positives.
-
-  
-
-#### High Precision but Low Recall
-
-The following labels have high precision but low recall, meaning the model rarely predicts these relationships, possibly due to data imbalance or weak feature representation:
-
-  
-
+Overall, SVM predicts stable results. The difference between `Precision` and `Recall` is not very large. Here some good results are demonstrated.
 
 | Label | Precision | Recall | F1 Score |
 |-------|-----------|--------|----------|
-| P140  | 1      | 0.36   | 0.53     |
-| P1411  | 0.98      | 0.62   | 0.76     |
-| P264  | 0.99      | 0.59   | 0.74     |
+| P105    | 0.98      | 0.95   | 0.96     |
+| P1435   | 0.98      | 0.99   | 0.99     |
+| P931   | 0.90      | 0.88   | 0.89     |
+| P1411   | 0.91      | 0.96   | 0.93     |
 
-
- 
-This suggests that these relationships are under-predicted, which might be caused by insufficient training examples or unclear features in the dataset.
 
 
 
@@ -287,6 +259,9 @@ The following labels have both low precision and recall, indicating that the mod
   
 
 These results suggest that the model frequently misclassifies these relationship types.
+
+
+
 
   
 
